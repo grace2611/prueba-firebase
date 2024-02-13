@@ -21,10 +21,10 @@
                 <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signin-modal">Signin</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link logged-in" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Signup</a>
+                <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">Signup</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="logout">Logout</a>
+                <a class="nav-link logged-in" href="#" id="logout">Logout</a>
               </li>
             </ul>
           </div>
@@ -45,7 +45,9 @@
                         <input id="email-signin" type="email" class="form-control mb-3" placeholder="Email" required>
                         <label for="password-signin" class="mb-1">Password</label>
                         <input id="password-signin" type="password" class="form-control mb-3" placeholder="******" required>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary form-control mb-2">Login</button>
+                        <hr/>
+                        <button class="btn btn-info" id="google-login">Google</button>
                     </form>
                 </div>
             </div>
