@@ -1,5 +1,5 @@
-export function showMessaje(message, color) {
-Toastify({
+export function showMessage(message, type = "success") {
+  Toastify({
     text: message,
     duration: 3000,
     destination: "https://github.com/apvarun/toastify-js",
@@ -9,8 +9,8 @@ Toastify({
     position: "right", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
-      background: color,
+      background: type === "success" ? "green" : "red",
     },
-    onClick: function(){} // Callback after click
+    // onClick: function () { } // Callback after click
   }).showToast();
 }

@@ -1,9 +1,14 @@
-import { signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
-import { auth } from './firebase.js';
-import { showMessaje } from "./show_message.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
+import { auth } from "./firebase.js";
 
-const logout = document.getElementById('logout');
+const logout = document.querySelector("#logout");
 
-logout.addEventListener('click', async () => {
-    await signOut(auth);
-})
+logout.addEventListener("click", async (e) => {
+  e.preventDefault();
+  try {
+    await signOut(auth)
+    console.log("signup out");
+  } catch (error) {
+    console.log(error)
+  }
+});
